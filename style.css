@@ -1,0 +1,461 @@
+/* Fonts */
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(./fonts/Gotham\ Bold.otf);
+}
+
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(./fonts/Gotham\ Medium.otf);
+}
+
+@font-face {
+    font-family: Gotham-Book;
+    src: url(./fonts/Gotham\ Book.otf);
+}
+
+/* Roots */
+
+:root {
+    --white-bg: #ffffff;
+    --play-bg: #cccccc;
+    --facebook-bg:rgba(59, 89, 152, 0.75);
+    --linkedin-bg: #0072b1;
+    --schedule-bg: rgba(252, 186, 3, 0.75);
+    --website-bg: rgba(58, 252, 32, 0.8);
+    --zoom-bg: rgba(250, 32, 252, 0.8);
+    --tools-bg: rgba(32, 181, 252, 0.8);
+}
+
+/* Global CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--white-bg);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Gotham-Book', sans-serif;
+    color: unset;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gotham-Bold', sans-serif;
+}
+
+p{
+    font-family: 'Gotham-Medium', sans-serif;
+}
+
+/* Hero Section */
+
+.hero-section {
+    padding-top: 10rem;
+    /* padding-bottom: 10rem; */
+}
+
+.container {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+    margin: 0 auto;
+}
+
+
+/* Menus */
+
+.menus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.menus li {
+    background: #484b56;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menus li > * {
+    pointer-events: none;
+}
+
+.menus li:hover {
+    transform: scale(1.25);
+}
+
+.menu-1 {
+    animation-name: menu-anime;
+    animation-iteration-count: infinite;
+    animation-duration: 1.25s;
+}
+
+@keyframes menu-anime {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.menus img {
+    width: 15px;   
+}
+
+.menus h3 {
+    font-family: 'Gotham-Book', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 0.2rem;
+}
+
+.menu-1 {
+    left: 260px;
+    top: -20px;
+}
+
+.menu-2 {
+    left: 330px;
+    top: 35px;
+}
+
+.menu-3 {
+    left: 380px;
+    top: 105px;
+}
+
+.menu-4 {
+    left: 400px;
+    top: 185px;
+}
+
+.menu-5 {
+    left: 385px;
+    top: 270px;
+}
+
+.menu-6 {
+    left: 345px;
+    top: 345px;
+}
+
+.menu-7 {
+    left: 280px;
+    top: 400px;
+}
+
+.hero-left {
+    position: relative;
+}
+
+.hero-left .circle {
+    background: #62d1da;
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-left: -5rem;
+}
+
+.hero-left .circle img {
+    position: absolute;
+    width: 450px;
+    bottom: -2%;
+    left: 0%;
+}
+
+.hero-right {
+    margin-left: 8rem;
+    padding-right: 1rem;
+}
+
+.hero-right .meet-btn {
+    font-size: 1.5rem;
+    background: #62d1da;
+    color: #fff;
+    padding: 0.5rem 6rem;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+    border: 2px solid #62d1da;
+    outline: none;
+}
+
+.hero-right .meet-btn:hover {
+    background: #fff;
+    color: #62d1da;
+}
+
+.hero-right h1 {
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin-top: 2rem;
+    color: #484b56;
+}
+
+.hero-right h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #62d1da;
+}
+
+.hero-right p {
+    font-size: 1.4rem;
+    color: #23405c;
+}
+
+.hero-right .hero-right-text1 {
+    margin-top: 1rem;
+}
+
+.hero-right .hero-right-text2 {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-right-content {
+    position: relative;
+}
+
+.hero-right .contact-btn {
+    font-size: 2rem;
+    color: #62d1da;
+    background: #fff;
+    border: 2px solid #62d1da;
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    position: absolute;
+    right: 5%;
+    font-family: 'Gotham-Medium', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+.hero-right .contact-btn:hover {
+    background: #62d1da;
+    color: #fff;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(59, 89, 152, 0.25);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.popup {
+    padding: 20px;
+    border-radius: 1rem;
+    background: #484b56d2;
+    color: white;
+    font-family: 'Gotham-Book', sans-serif;
+    overflow: hidden;
+    transform: translateY(-8rem);
+    opacity: 0;
+    position: relative;
+    transition: all 0.8s;
+    transition-delay: 0.3s;
+}
+
+.popup-content {
+    display: none;
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+
+.head {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+.head h2 {
+    font-size: 1.8rem;
+}
+
+.head h3 {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
+
+.popup-close {
+    width: 3rem;
+    height: 2.5rem;
+    background-color: #484b56;
+    border: none;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close-icon {
+    height: 80%;
+    pointer-events: none;
+}
+
+.show-popup {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: right;
+}
+
+.fb-link {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.link-icon {
+    display: inline-block;
+    height: 3rem;
+    /* padding: 1rem; */
+}
+
+.fb-wrap {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.icon-wrap {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 2rem;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.zoom-icon {
+    width: 3rem;
+    height: auto;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 965px) {
+
+    .hero-section {
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+
+    .hero-left {
+        margin-top: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-1 {
+        left: 170px;
+        top: -20px;
+    }
+    
+    .menu-2 {
+        left: 240px;
+        top: 20px;
+    }
+    
+    .menu-3 {
+        left: 295px;
+        top: 85px;
+    }
+    
+    .menu-4 {
+        left: 320px;
+        top: 165px;
+    }
+    
+    .menu-5 {
+        left: 320px;
+        top: 250px;
+    }
+    
+    .menu-6 {
+        left: 285px;
+        top: 325px;
+    }
+    
+    .menu-7 {
+        left: 230px;
+        top: 390px;
+    }
+
+    .hero-right {
+        margin-left: 3rem;
+        z-index: 2;
+    }
+
+    .hero-left .circle {
+        margin-left: -12rem;
+    }
+
+    .hero-right .meet-btn {
+        z-index: 2;
+    }
+
+    .hero-right h1 {
+        font-size: 4rem;
+    }
+
+    .hero-right h2 {
+        font-size: 1.8rem;
+    }
+}
